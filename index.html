@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>素養導向命題｜國小自然科評量設計與 AI 輔助應用</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-title">素養導向命題</div>
+        <div class="brand-subtitle">國小自然科評量設計 × AI 輔助應用</div>
+      </div>
+      <nav class="top-actions">
+        <button id="overviewBtn" class="pill">總覽</button>
+        <button id="notesBtn" class="pill">講稿</button>
+        <button id="fullscreenBtn" class="pill">全螢幕</button>
+      </nav>
+    </header>
+
+    <main class="stage-wrap">
+      <button id="prevBtn" class="nav-arrow nav-left" aria-label="上一頁">←</button>
+      <section id="stage" class="stage" aria-live="polite"></section>
+      <button id="nextBtn" class="nav-arrow nav-right" aria-label="下一頁">→</button>
+    </main>
+
+    <section class="progress-area">
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      <div id="counter" class="counter">01 / 18</div>
+    </section>
+
+    <section id="thumbs" class="thumbs" aria-label="投影片縮圖導覽"></section>
+  </div>
+
+  <aside id="notesPanel" class="notes-panel" aria-hidden="true">
+    <div class="notes-head">
+      <strong>講者備註</strong>
+      <button id="closeNotes" class="icon-btn">×</button>
+    </div>
+    <div id="notesContent" class="notes-content"></div>
+  </aside>
+
+  <div id="overviewModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong>簡報總覽</strong>
+        <button id="closeOverview" class="icon-btn">×</button>
+      </div>
+      <div id="overviewGrid" class="overview-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
